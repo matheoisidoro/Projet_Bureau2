@@ -1,69 +1,82 @@
 /* Styles de base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  /* Icône du menu */
-  .menu-icon {
+}
+
+#menu-id {
+    color: white;
+    font-size: 40px;
+}
+/* Icône du menu */
+.menu-icon {
     position: fixed;
-    top: 20px; /* Positionner l'icône à 20px du haut */
-    right: 20px; /* Positionner l'icône à 20px de la droite */
+    top: 20px;
+    right: 20px;
     cursor: pointer;
-    z-index: 1000; /* Pour s'assurer que l'icône est au-dessus des autres éléments */
-  }
-  
-  .menu-icon .icon-img {
-    width: 40px; /* Ajuste la taille de l'icône */
+    z-index: 1000;
+}
+
+.menu-icon .icon-img {
+    width: 40px;
     height: 40px;
     object-fit: cover;
-  }
-  
-  /* Masquer le menu modale par défaut */
-  .menu-modal {
+}
+
+/* Masquer l'icône quand le menu est actif */
+.menu-modal.active ~ .menu-icon {
+    display: none;
+}
+
+/* Masquer le menu modale par défaut */
+.menu-modal {
     display: none;
     position: fixed;
     top: 0;
-    right: 0; /* Aligné à droite */
-    width: 250px; /* Largeur du menu */
-    height: 100%; /* Hauteur complète de la page */
-    background-color: rgba(255, 255, 255, 1); /* Fond blanc */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Ombre sur le côté gauche */
-  }
-  
-  /* Contenu du menu */
-  .menu-content {
+    right: 0;
+    width: 400px; /* Changer la largeur*/
+    height: 100%;
+    background-color: #585858;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+}
+
+.menu-content {
     padding: 20px;
-    text-align: left; /* Aligner le texte à gauche */
-  }
-  
-  .menu-content h2 {
+    text-align: left;
+}
+
+.menu-content h2 {
     margin-bottom: 20px;
-  }
-  
-  .menu-content ul {
+}
+
+.menu-content ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  .menu-content ul li {
+}
+
+.menu-content ul li {
     margin: 10px 0;
-  }
-  
-  .menu-content ul li a {
+}
+
+.separator {
+    height: 2px; /* Épaisseur de la barre */
+    background-color: white; /* Couleur de la barre */
+    margin: 10px 0; /* Espace autour de la barre */
+}
+
+.menu-content ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 18px;
-  }
-  
-  .menu-content ul li a:hover {
+}
+
+.menu-content ul li a:hover {
     color: blue;
-  }
-  
-  /* Afficher le menu modale lorsque l'utilisateur clique */
-  .menu-modal.active {
-    display: block; /* Affiche le menu modale */
-  }
-  
-  
+}
+
+/* Afficher le menu modale lorsque l'utilisateur clique */
+.menu-modal.active {
+    display: block;
+}
