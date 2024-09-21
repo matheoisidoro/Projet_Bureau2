@@ -1,0 +1,3 @@
+http://localhost:8000/Test%20fonctionaliter/icone_menu.html
+
+pour lancer le servuer sur VS code :python serveur.py
