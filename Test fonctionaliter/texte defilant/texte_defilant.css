@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Roboto', 'Arial', sans-serif; /* Utilise Helvetica pour une meilleure lisibilité */
+    font-family: 'Roboto', 'Arial', sans-serif; /* Utilise Roboto pour une meilleure lisibilité */
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
 
 .scrolling-text {
     display: flex; /* Utiliser flex pour aligner les items horizontalement */
-    animation: scroll-text 10s linear infinite; /* Durée de l'animation */
+    animation: scroll-text 15s linear infinite; /* Durée de l'animation */
 }
 
 .text-item {
@@ -35,11 +35,14 @@ body {
 }
 
 .title {
-    font-size: 3em; /* Taille pour le titre (plus grand) */
+    font-size: 2.5em; /* Taille réduite pour le titre */
+    color: #333; /* Couleur sombre pour le texte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère pour le relief */
 }
 
 .subtitle {
-    font-size: 1.2em; /* Taille pour le sous-titre (plus petit) */
+    font-size: 1.2em; /* Taille réduite pour le sous-titre */
+    color: #555; /* Couleur pour un meilleur contraste */
 }
 
 @keyframes scroll-text {
@@ -50,4 +53,3 @@ body {
         transform: translateX(-50%); /* Défilement jusqu'à ce qu'une moitié sorte à gauche */
     }
 }
-
