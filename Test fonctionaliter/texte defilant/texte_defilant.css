@@ -14,19 +14,19 @@ body {
     overflow: hidden; /* Cache tout débordement */
 }
 
-.container {
+.container_defilant {
     width: 100%;
     overflow: hidden; /* Cache le texte hors de la zone visible */
     position: relative;
     height: 100px; /* Ajustement de la hauteur du conteneur pour le texte */
 }
 
-.scrolling-text {
+.defilant-texte {
     display: flex; /* Utiliser flex pour aligner les items horizontalement */
     animation: scroll-text 15s linear infinite; /* Durée de l'animation */
 }
 
-.text-item {
+.texte {
     display: flex;
     flex-direction: column; /* Alignement vertical */
     align-items: center; /* Centrer horizontalement */
@@ -34,13 +34,13 @@ body {
     margin: 0 50px; /* Espace entre les items */
 }
 
-.title {
+.titre {
     font-size: 2.5em; /* Taille réduite pour le titre */
     color: #333; /* Couleur sombre pour le texte */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Ombre légère pour le relief */
 }
 
-.subtitle {
+.sous-titre {
     font-size: 1.2em; /* Taille réduite pour le sous-titre */
     color: #555; /* Couleur pour un meilleur contraste */
 }
