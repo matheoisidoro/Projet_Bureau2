@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif; /* Utilise Helvetica pour une meilleure lisibilité */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Cache tout débordement */
+}
+
+.container {
+    width: 100%;
+    overflow: hidden; /* Cache le texte hors de la zone visible */
+    position: relative;
+    height: 100px; /* Ajustement de la hauteur du conteneur pour le texte */
+}
+
+.scrolling-text {
+    display: flex; /* Utiliser flex pour aligner les items horizontalement */
+    animation: scroll-text 10s linear infinite; /* Durée de l'animation */
+}
+
+.text-item {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    margin: 0 50px; /* Espace entre les items */
+}
+
+.title {
+    font-size: 3em; /* Taille pour le titre (plus grand) */
+}
+
+.subtitle {
+    font-size: 1.2em; /* Taille pour le sous-titre (plus petit) */
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%); /* Le texte commence hors de l'écran à droite */
+    }
+    100% {
+        transform: translateX(-50%); /* Défilement jusqu'à ce qu'une moitié sorte à gauche */
+    }
+}
+
